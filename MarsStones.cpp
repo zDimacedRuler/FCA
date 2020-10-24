@@ -19,9 +19,9 @@ using namespace std;
 
 int maxUniqueStones(int weight, int n, int common[]){
     int maxStones=0, sum=0;
-    map<int, int> commonStones;
+    set<int> commonStones;
     for(int i=0;i<n;i++)
-        commonStones.insert({common[i], 1});
+        commonStones.insert(common[i]);
     for(int i=1;i<=weight; i++){
         //skip common stones
         if(commonStones.find(i)==commonStones.end()){

@@ -18,14 +18,14 @@ using namespace std;
 
 int maxMarks(int n, int marks[]){
     int sum=0;
-    map<int, int> distinctMarks;
+    set<int> distinctMarks;
     sort(marks, marks+n);
     for(int i=n-1; i>=0; i--){
         int temp=marks[i];
         //find a distinct greater no. than the current one
         while(distinctMarks.find(temp)!=distinctMarks.end())
             temp++;
-        distinctMarks.insert({temp, 1});
+        distinctMarks.insert(temp);
         sum+=temp;
         marks[i]=temp;
     }
