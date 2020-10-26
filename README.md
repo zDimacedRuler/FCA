@@ -1,2 +1,2 @@
 # FCA
-Questions solved using C++
+Questions solved in C++ using STL
