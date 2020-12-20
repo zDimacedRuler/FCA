@@ -35,7 +35,7 @@ int findMinDays(int confidence, int index, int exercises[], int days) {
             confidence+=exercises[i];
         }
     }
-    return 0;
+    return -1;
 }
 
 int main(){
@@ -54,10 +54,7 @@ int main(){
         cout<<exercises[i]<<" ";
     cout<<endl;
     int min = findMinDays(input1, input2-1, exercises, days);
-    if(days==0)
-        cout<<-1<<endl;
-    else
-        cout<<min<<endl;
+    cout<<min<<endl;
     return 0;
 }
 
